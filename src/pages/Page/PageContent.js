@@ -4,7 +4,6 @@ import PageComponent from './PageComponent';
 
 const PageContent = (props) => {
     const { pages } = props;
-    console.log(pages);
     return ( 
         <>
             <section>
