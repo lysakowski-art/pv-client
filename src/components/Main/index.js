@@ -1,27 +1,16 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { Query } from "@apollo/react-components";
-import Nav from "../Nav/index";
-import MENU_QUERY from "../../queries/catagories/category";
+import Page from "../../pages/Page/index";
+import News from "../../pages/News/index";
+import Contact from "../../pages/Contact/index";
+
 const Main = () => {
   return (
     <>
-      <Nav />
       <Switch>
-        <Query query={MENU_QUERY}>
-          {({ loading, error, data }) => {
-            if (loading) return "Loading...";
-            if (error) return `Error! ${error.message}`;
-            const { menus } = data;
-            return(
-            <>
-              {menus.map(menu=>(
-              <Route key={menu.id} to={`/category/${menu}`}/>
-              ))}
-            </>
-            )
-          }}
-        </Query>
+        <Route path="/:url" component={Page} />
+        <Route path="/news" component={News} />
+        <Route path="/kontakt" component={Contact} />
       </Switch>
     </>
   );

@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import App from "./containers/App";
 import {ApolloProvider  } from 'react-apollo'
 import { BrowserRouter as Router } from "react-router-dom";
-import client from './utils/apolloClient'
+import client from './utils/apolloClient';
+import './index.css'
 
 ReactDOM.render(
   <Router>
