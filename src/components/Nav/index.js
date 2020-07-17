@@ -1,14 +1,14 @@
 import React from "react";
 import { Query } from "react-apollo";
-import { Link } from "react-router-dom";
+import MenuLink from "./MenuLink";
+import SubmenuLink from "./SubmenuLink";
 
 import MENU_QUERY from "../../queries/catagories/category";
 
-const toPath = (string) => {
-  return string.replace("?","").split(" ").join("_").toLowerCase()
-}
 
-const Nav = () => { 
+
+
+const Nav = () => {
   return (
     <div>
       <Query query={MENU_QUERY}>
@@ -22,30 +22,15 @@ const Nav = () => {
                 {menus.map((menu) => {
                   if (menu.sub_menus.length === 0) {
                     return (
-                      <li key={menu.id}>
-                        <Link to={`/${toPath(menu.name)}`}>
-                          {menu.name}
-                        </Link>
-                      </li>
+                      <MenuLink menu={menu}/>
                     );
                   } else if (menu.sub_menus.length > 0) {
                     return (
-                      <li key={menu.id}>
-                        <Link to={`/${toPath(menu.name)}`}>
-                          {menu.name}
-                        </Link>
-                        <ul>
-                          {menu.sub_menus.map((subMenu) => (
-                            <li key={subMenu.id}>
-                              <Link to={`/${toPath(subMenu.name)}`}>
-                                {subMenu.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
+                      <SubmenuLink menu={menu} />
                     );
-                  } else {return null}
+                  } else {
+                    return null;
+                  }
                 })}
               </ul>
             </div>

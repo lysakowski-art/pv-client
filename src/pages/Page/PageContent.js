@@ -4,12 +4,13 @@ import PageComponent from './PageComponent';
 
 const PageContent = (props) => {
     const { pages } = props;
+    console.log(pages);
     return ( 
         <>
             <section>
                 {ReactHtmlParser(pages[0].content)}
             </section>
-            {pages[0].page_components.length>0 ?  <PageComponent page_components={pages[0].page_ocmponents}/> : null}
+            {pages[0].page_components.length>0 ?  <PageComponent page_components={pages[0].page_components}/> : null}
         </>
      )
 }
