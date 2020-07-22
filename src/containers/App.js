@@ -1,21 +1,16 @@
 import React from "react";
-import Nav from "../components/Nav/index";
+import Navigation from "../components/Navigation/index";
 import Footer from "../components/Footer/index";
-// import Header from "../components/Header/index";
 import Main from "../components/Main/index";
-
+import "./App.scss";
 
 const App = () => {
   return (
-    <>
-      <Nav />
-      <br/>
-      <br/>
-      {/* <Header /> */}
-      <br/>
+    <div className="wrapper">
+      <Navigation />
       <Main />
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -7,14 +7,14 @@ import News from "../../pages/News/index";
 
 const Main = () => {
   return (
-    <>
+    <div className="cnt">
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/news" component={News}/>
         <Route exact path="/kontakt" component={Contact} />
         <Route exact path="/:url" component={Page} />
       </Switch>
-    </>
+    </div>
   );
 };
 

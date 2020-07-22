@@ -6,7 +6,7 @@ import ReactHtmlParser from "react-html-parser";
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className="footer">
         <Query query={FOOTER_QUERY}>
           {({ loading, error, data }) => {
             if (loading) return "Loading...";

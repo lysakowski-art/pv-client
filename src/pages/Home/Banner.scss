@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+$mainFont: "Lora", serif;
+
+.banner {
+  height: 100vh;
+  .title-holder {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    .title-banner {
+      position: relative;
+      top: 50px;
+      font-family: $mainFont;
+      font-size: 5.5rem;
+    }
+    #more-arrows {
+      top: 50px;
+      position: relative;
+      width: 75px;
+      height: 65px;
+
+      &:hover {
+        polygon {
+          fill: #333;
+          transition: all 0.2s ease-out;
+
+          &.arrow-bottom {
+            transform: translateY(-18px);
+          }
+
+          &.arrow-top {
+            transform: translateY(18px);
+          }
+        }
+      }
+    }
+
+    polygon {
+      fill: #333;
+      transition: all 0.2s ease-out;
+
+      &.arrow-middle {
+        opacity: 0.75;
+      }
+
+      &.arrow-top {
+        opacity: 0.5;
+      }
+    }
+  }
+}
