@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import "../pages/Home/Banner.scss";
 @import "../pages/Home/Home-Info.scss";
+@import "../pages/Home/InvestmentReasons.scss";
+@import "../pages/Home/LatestArticles.scss";
+@import "../components/Navigation/Navigation.scss";
+@import "../components/Footer/Footer.scss";
 
 $mainFont: "Lora", serif;
 
@@ -19,7 +23,7 @@ $mainFont: "Lora", serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../img/shutterstock_191958002.jpg");
+  // background-image: url("../img/");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,25 +38,16 @@ $mainFont: "Lora", serif;
     height: auto;
   }
 }
-.nav-custom {
-  font-size: 1.25rem;
-  font-weight: 600;
-  background-color: hsla(279, 12%, 78%, 0.27);
-  font-family: $mainFont;
-}
-
 div.main.col {
   padding-right: 0;
   padding-left: 0;
 }
-.footer {
-  display: flex;
-}
+
 .wrapper {
   // background-image: url("../img/shutterstock_191958002.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100vw;
+  width: 100%;
   padding: 0;
   margin: 0;
 }

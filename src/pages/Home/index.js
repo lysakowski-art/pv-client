@@ -3,8 +3,8 @@ import Banner from "./Banner";
 import HomeInfo from "./HomeInfo";
 import LatestArticles from "./LatestArticles";
 import InvestmentReasons from "./InvestmentReasons";
-import * as Scroll from "react-scroll";
 import { Link } from "react-scroll";
+import Fade from "react-reveal/Fade";
 
 const Home = () => {
   return (
@@ -35,12 +35,16 @@ const Home = () => {
         <section className="home-info">
           <HomeInfo />
         </section>
+
         <section className="investment-reasons">
           <InvestmentReasons />
         </section>
-        <section className="latest-articles">
-          <LatestArticles />
-        </section>
+
+        <Fade bottom>
+          <section className="latest-articles">
+            <LatestArticles />
+          </section>
+        </Fade>
       </div>
     </>
   );

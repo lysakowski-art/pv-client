@@ -19,10 +19,10 @@ const MenuLink = ({ menu }) => {
           target="_blank"
           rel="noopener nofollow referrer"
         >
-          Dom Finansowy WEST
+          DOM FINANSOWY WEST
         </Nav.Link>
       ) : (
-        <Nav.Link as={Link} to={`/${toPath(menu.name)}`}>{menu.name}</Nav.Link>
+        <Nav.Link as={Link} to={`/${toPath(menu.name)}`}>{menu.name.toUpperCase()}</Nav.Link>
       )}
     </>
   );

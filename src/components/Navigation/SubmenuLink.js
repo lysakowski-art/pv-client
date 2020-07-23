@@ -13,16 +13,16 @@ const toPath = (string) => {
 const SubmenuLink = ({ menu }) => {
   return (
     <>
-      <NavDropdown title={menu.name} id="basic-nav-dropdown">
+      <NavDropdown title={menu.name.toUpperCase()} id="basic-nav-dropdown">
         <NavDropdown.Item>
           <Nav.Link as={Link} to={`/${toPath(menu.name)}`}>
-            {menu.name}
+            {menu.name.toUpperCase()}
           </Nav.Link>
         </NavDropdown.Item>
         {menu.sub_menus.map((subMenu) => (
           <NavDropdown.Item key={subMenu.id}>
             <Nav.Link as={Link} to={`/${toPath(subMenu.name)}`}>
-              {subMenu.name}
+              {subMenu.name.toUpperCase()}
             </Nav.Link>
           </NavDropdown.Item>
         ))}

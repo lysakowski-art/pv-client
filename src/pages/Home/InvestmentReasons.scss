@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+.investment-reasons{
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+    text-align: center;
+    // background-image: url("../../img/shutterstock_247618945.jpg");
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: contain;
+    .reasons-title{
+        color: #ffffff;
+        font-size: 2.5rem;
+        width: 100%;
+        font-family: "Lora", serif;
+        position: absolute;
+        top: 6rem;
+    }
+    .reasons-cnt{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        .icon{
+            color: #ffffff;
+            font-size: 3rem;
+            height: 5rem;
+        }
+    }
+    .reasons-item{
+        h5{
+            color: #ffffff;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+    }
+}

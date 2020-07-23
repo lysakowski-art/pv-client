@@ -6,7 +6,7 @@ const Article = ({article}) => {
         <div className="card-cnt">
             <img src="https://prestigeventures.pl/sites/all/themes/business/images/slide-image-1.jpg" alt="img"/>
             <h3>{article.name}</h3>
-            {ReactHtmlParser(article.content).slice(0,1)}
+            <div className="text-container">{ReactHtmlParser(article.content).slice(0,1)}</div>
         </div>
      );
 }
