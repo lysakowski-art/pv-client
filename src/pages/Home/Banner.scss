@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 $mainFont: "Lora", serif;
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 .banner {
   margin-top: 60px;
   height: 100vh;
-  background-color: #000000;
+  background-color: #333;
   .title-holder {
     width: 100vw;
     display: flex;
@@ -14,9 +15,11 @@ $mainFont: "Lora", serif;
     position: absolute;
     // color: ;
     .title-banner {
+      color: #e99b52;
       position: relative;
       top: 50px;
-      font-family: $mainFont;
+      font-family: "Playfair Display", serif;
+
       font-size: 5.5rem;
     }
     #more-arrows {
@@ -27,7 +30,7 @@ $mainFont: "Lora", serif;
 
       &:hover {
         polygon {
-          fill: #333;
+          fill: #c8a482;
           transition: all 0.2s ease-out;
 
           &.arrow-bottom {
@@ -42,7 +45,7 @@ $mainFont: "Lora", serif;
     }
 
     polygon {
-      fill: #333;
+      fill: #c8a482;
       transition: all 0.2s ease-out;
 
       &.arrow-middle {
