@@ -1,14 +1,14 @@
 import React from "react";
 import { Query } from "@apollo/react-components";
 import FOOTER_QUERY from "../../queries/footer/footer";
-import ReactHtmlParser from "react-html-parser";
 import CookieInfo from './CookieInfo';
 import Adress from './Adress'
 
 const Footer = () => {
   return (
     <>
-      <footer className="footer">
+      <footer className="footer-pos">
+        <div className="footer">
         <div className="footer-cnt">
           <Query query={FOOTER_QUERY}>
             {({ loading, error, data }) => {
@@ -28,6 +28,7 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <span>©Copyright Prestige Ventures</span>
+        </div>
         </div>
       </footer>
     </>

@@ -5,7 +5,7 @@ const PersonalMessage = ({handleMessage}) => {
         handleMessage(e.target.value)
     }
     return (
-    <textarea onChange={handleInput} cols="30" rows="10">
+    <textarea onChange={handleInput} cols="30" rows="6">
       What's on your mind?
     </textarea>
   );

@@ -2,7 +2,9 @@
 $mainFont: "Lora", serif;
 
 .banner {
+  margin-top: 60px;
   height: 100vh;
+  background-color: #000000;
   .title-holder {
     width: 100vw;
     display: flex;
@@ -10,6 +12,7 @@ $mainFont: "Lora", serif;
     align-items: center;
     flex-direction: column;
     position: absolute;
+    // color: ;
     .title-banner {
       position: relative;
       top: 50px;

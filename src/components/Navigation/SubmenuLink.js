@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { NavDropdown, Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const toPath = (string) => {
   if (string === "/home") {
@@ -11,23 +10,31 @@ const toPath = (string) => {
 };
 
 const SubmenuLink = ({ menu }) => {
+  console.log(menu);
+
   return (
-    <>
-      <NavDropdown title={menu.name.toUpperCase()} id="basic-nav-dropdown">
-        <NavDropdown.Item>
-          <Nav.Link as={Link} to={`/${toPath(menu.name)}`}>
-            {menu.name.toUpperCase()}
-          </Nav.Link>
-        </NavDropdown.Item>
-        {menu.sub_menus.map((subMenu) => (
-          <NavDropdown.Item key={subMenu.id}>
-            <Nav.Link as={Link} to={`/${toPath(subMenu.name)}`}>
-              {subMenu.name.toUpperCase()}
-            </Nav.Link>
-          </NavDropdown.Item>
+    <li className="sub-menu-main-item" key={menu.index}>
+      <NavLink
+        className="nav-item"
+        activeClassName="active-nav-item"
+        to={`/${toPath(menu.name)}`}
+      >
+        {menu.name.toUpperCase()}
+      </NavLink>
+      <ul className="dropdown">
+        {menu.sub_menus.map((el) => (
+          <li className="sub-menu-item" key={el.index}>
+            <NavLink
+              className="nav-item"
+              activeClassName="active-nav-item"
+              to={`/${toPath(el.name)}`}
+            >
+              {el.name.toUpperCase()}
+            </NavLink>
+          </li>
         ))}
-      </NavDropdown>
-    </>
+      </ul>
+    </li>
   );
 };
 

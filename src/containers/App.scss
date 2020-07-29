@@ -7,6 +7,9 @@
 @import "../pages/Home/LatestArticles.scss";
 @import "../components/Navigation/Navigation.scss";
 @import "../components/Footer/Footer.scss";
+@import "../pages/Page/Page.scss";
+@import "../pages/Contact/Contact.scss";
+@import "../pages/News/News.scss";
 
 $mainFont: "Lora", serif;
 
@@ -18,15 +21,18 @@ $mainFont: "Lora", serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100%;
+  padding-bottom: 25vh;
+  background-image: url("../img/shutterstock_122363737.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .section-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-image: url("../img/");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 .thumbs-wrapper,
 .axis-vertical {
@@ -44,10 +50,11 @@ div.main.col {
 }
 
 .wrapper {
-  // background-image: url("../img/shutterstock_191958002.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
   padding: 0;
   margin: 0;
+  position: relative;
+  min-height: 100vh;
 }

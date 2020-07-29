@@ -1,0 +1,39 @@
+.contact-cnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .form-cnt {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    .form {
+      font-family: "Crimson Text", serif;
+      font-size: 15px;
+      line-height: 20px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
+      background-color: #ffffff50;
+      label {
+        display: flex;
+        flex-direction: column;
+      }
+      .policy-checkbox {
+        flex-direction: row;
+      }
+    }
+  }
+  .privacy-info {
+    font-size: 12px;
+    text-align: justify;
+    width: 50%;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #ffffff50;
+  }
+}

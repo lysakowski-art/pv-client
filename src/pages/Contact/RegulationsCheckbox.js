@@ -7,10 +7,10 @@ const RegulationsCheckbox = ({ handleRegulations, regulations }) => {
     handleRegulations(!regulations);
   };
   return (
-    <label>
+    <label className="policy-checkbox">
+      <input type="checkbox" onChange={handleInput} checked={regulations}/>
       Akceptuję
       <Link to={"tu wstawić wewnętrzny do pagea regulamin"}>regulamin</Link>
-      <input type="checkbox" onChange={handleInput} checked={regulations}/>
     </label>
   );
 };

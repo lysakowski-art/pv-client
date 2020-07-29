@@ -7,10 +7,10 @@ const PrivPolicyCheckbox = ({ handlePrivPolicy, privPolicy }) => {
     handlePrivPolicy(!privPolicy);
   };
   return (
-    <label>
+    <label className="policy-checkbox">
+      <input type="checkbox" onChange={handleInput} checked={privPolicy}/>
       Akceptuję
       <Link to="./polityka_prywatności">Politykę Prywatności</Link>
-      <input type="checkbox" onChange={handleInput} checked={privPolicy}/>
     </label>
   );
 };

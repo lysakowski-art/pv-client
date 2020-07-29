@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {Nav} from 'react-bootstrap'
+import { NavLink } from "react-router-dom";
 
 const toPath = (string) => {
   if (string === "Home") {
@@ -14,15 +13,16 @@ const MenuLink = ({ menu }) => {
   return (
     <>
       {menu.name === "Dom Finansowy WEST" ? (
-        <Nav.Link
+        <a 
+        className="nav-item"
           href="https://dfwest.pl/"
           target="_blank"
-          rel="noopener nofollow referrer"
+          rel="noopener noreferrer"
         >
           DOM FINANSOWY WEST
-        </Nav.Link>
+        </a>
       ) : (
-        <Nav.Link as={Link} to={`/${toPath(menu.name)}`}>{menu.name.toUpperCase()}</Nav.Link>
+        <NavLink className="nav-item" activeClassName="active-nav-item" to={`/${toPath(menu.name)}`}>{menu.name.toUpperCase()}</NavLink>
       )}
     </>
   );
