@@ -6,21 +6,16 @@
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: black;
     position: relative;
     text-align: center;
-    background-image: url("../../img/shutterstock_122363737.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     .reasons-title{
+        margin-top: 4.5rem;
         color: #ffffff;
         font-size: 2.5rem;
         width: 100%;
         font-family: "Lora", serif;
-        position: absolute;
-        top: 3rem;
     }
     .reasons-cnt{
         width: 100%;

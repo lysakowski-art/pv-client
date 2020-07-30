@@ -5,19 +5,24 @@
     justify-content: center;
     .news-cnt{
         display: flex;
-        margin-top: 120px;
-        width: 1000px;
+        margin-top: 60px;
+        width: 1100px;
+        ul{
+            width: 1100px;
+        }
         .article-cnt{
             display: flex;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin: 60px 0;
             .article-content{
-                height: 150px;
-                padding:10px;
+                height: 175px;
+                padding:30px;
                 background-color:#000000;
+                position: relative;
                 .article-title{
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                     color: #ffffff;
+                    font-size: 18px;
+                    font-family: "Cabin", sans-serif;
                  }
                 .article-text{
                     color: #797979;
@@ -25,23 +30,32 @@
                     line-height: 22px;
                     font-size: 16px;
                     font-weight: 400;
-                    width: 830px;
+                    width: 865px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;   
                 }
                 .article-button {
                     border: none;
+                    background-color: #c9a482;
                     color: #fff;
+                    padding: 10px 30px;
+                    font-size: 12px;
+                    font-family: Cabin,sans-serif;
+                    font-weight: 400;
                     overflow: hidden;
+                    position: absolute;
+                    bottom: 20px;
                 }
                 .oposite-button {
 
+                    right: 25px;
+                    bottom: 20px;
                 }
             }
             .article-img{
-                height: 150px;
-                width: auto;
+                height: 175px;
+                width: 175px;
             }
         }
         .article-cnt-oposite{

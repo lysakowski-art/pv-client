@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGem } from "@fortawesome/free-solid-svg-icons";
 
 const toPath = (string) => {
   if (string === "Home") {
@@ -12,18 +14,17 @@ const toPath = (string) => {
 const MenuLink = ({ menu }) => {
   return (
     <>
-      {menu.name === "Dom Finansowy WEST" ? (
-        <a 
+      <NavLink
         className="nav-item"
-          href="https://dfwest.pl/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          DOM FINANSOWY WEST
-        </a>
-      ) : (
-        <NavLink className="nav-item" activeClassName="active-nav-item" to={`/${toPath(menu.name)}`}>{menu.name.toUpperCase()}</NavLink>
-      )}
+        activeClassName="active-nav-item"
+        to={`/${toPath(menu.name)}`}
+      >
+        {menu.name === "Home" ? (
+          <FontAwesomeIcon className="home-icon" icon={faGem} />
+        ) : (
+          menu.name.toUpperCase()
+        )}
+      </NavLink>
     </>
   );
 };

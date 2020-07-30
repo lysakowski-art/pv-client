@@ -5,7 +5,7 @@ import LatestArticles from "./LatestArticles";
 import InvestmentReasons from "./InvestmentReasons";
 import { Link } from "react-scroll";
 import Fade from "react-reveal/Fade";
-
+import { ParallaxBanner } from "react-scroll-parallax";
 const Home = () => {
   return (
     <>
@@ -41,7 +41,17 @@ const Home = () => {
         </section>
 
         <section className="investment-reasons">
-          <InvestmentReasons />
+          <ParallaxBanner
+            layers={[
+              {
+                image:
+                  "https://wallpaperstock.net/diamond-wallpapers_39299_1920x1080.jpg",
+                amount: 0.4,
+              },
+            ]}
+          >
+            <InvestmentReasons />
+          </ParallaxBanner>
         </section>
 
         <Fade bottom>
