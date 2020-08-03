@@ -1,15 +1,15 @@
 import gql from "graphql-tag";
 
 const MENU_QUERY = gql`
-query Menus {
-    menus{
-        name
+  query getMenus {
+    menus(sort: "order") {
+      name
+      id
+      sub_menus {
         id
-        sub_menus{
-          id
-          name
-        }
+        name
       }
+    }
   }
 `;
 

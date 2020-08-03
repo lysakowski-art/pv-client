@@ -29,7 +29,7 @@ const Article = ({ article, index }) => {
           </div>
           <img
             className="article-img"
-            src="https://www.placecage.com/c/300/300"
+            src={process.env.REACT_APP_BACKEND_URL + article.img[0].url}
             alt="jakis cage"
           />
         </div>
@@ -56,8 +56,8 @@ const Article = ({ article, index }) => {
           </div>
           <img
             className="article-img"
-            src="https://www.placecage.com/c/300/300"
-            alt="jakis cage"
+            src={process.env.REACT_APP_BACKEND_URL + article.img[0].url}
+              alt="jakis cage"
           />
         </div>
       </li>

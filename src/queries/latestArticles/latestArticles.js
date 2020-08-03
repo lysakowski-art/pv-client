@@ -6,6 +6,9 @@ const getLatestArticles = gql`
       id
       name
       content
+      img {
+        url
+      }
     }
   }
 `;

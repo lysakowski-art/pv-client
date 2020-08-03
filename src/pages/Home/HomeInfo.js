@@ -6,7 +6,7 @@ import ReactHtmlParser from "react-html-parser";
 const HomeInfo = () => {
   return (
     <>
-      <Query query={getHome} variables={{ id: "5f0d7e6e4f7c9b19923f0a57" }}>
+      <Query query={getHome} variables={{ id: "5f27de74ea26eb30796b08cc" }}>
         {({ loading, error, data }) => {
           if (loading) return "Loading...";
           if (error) return `Error: ${error.message}`;
