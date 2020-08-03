@@ -22,10 +22,11 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+
     .icon {
       color: #ffffff;
       font-size: 3rem;
-      height: 5rem;
+      height: 5rem
     }
   }
   .reasons-item {
@@ -35,4 +36,13 @@
       font-size: 1.6rem;
     }
   }
+}
+.investment-reasons::before{
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background-color: #00000010;
 }

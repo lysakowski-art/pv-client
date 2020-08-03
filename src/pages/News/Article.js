@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 import isOdd from "is-odd";
+import Fade from "react-reveal/Fade";
+
 
 const Article = ({ article, index }) => {
   const [classToggle, setClassToggle] = useState(true);
@@ -12,6 +14,7 @@ const Article = ({ article, index }) => {
 
   if (isOdd(index)) {
     return (
+      <Fade>
       <li key={article.index}>
         <div className="article-cnt ">
           <div
@@ -34,10 +37,12 @@ const Article = ({ article, index }) => {
           />
         </div>
       </li>
+      </Fade>
     );
   } else {
     return (
-      <li key={article.index}>
+      <Fade>
+        <li key={article.index}>
         <div className="article-cnt article-cnt-oposite">
           <div className={
             classToggle
@@ -61,6 +66,7 @@ const Article = ({ article, index }) => {
           />
         </div>
       </li>
+      </Fade>
     );
   }
 };

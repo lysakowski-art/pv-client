@@ -3,6 +3,7 @@ import ReactHtmlParser from "react-html-parser";
 import PageComponent from "./PageComponent";
 import { ParallaxBanner } from "react-scroll-parallax";
 
+
 const PageContent = (props) => {
   const { pages } = props;
   return (
@@ -25,6 +26,7 @@ const PageContent = (props) => {
         </ParallaxBanner>
       </section>
       {pages[0].page_components.length > 0 ? (
+
         <PageComponent page_components={pages[0].page_components} />
       ) : null}
     </>

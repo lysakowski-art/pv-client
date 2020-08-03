@@ -2,11 +2,9 @@ import React from "react";
 import { Query } from "@apollo/react-components";
 import getNews from "../../queries/news/news";
 import Article from "./Article";
-
 const News = () => {
   return (
     <div className="news-main">
- 
       <div className="news-wrapper">
         <Query query={getNews}>
           {({ loading, error, data }) => {

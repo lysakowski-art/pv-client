@@ -10,17 +10,15 @@ import { faHandSparkles } from "@fortawesome/free-solid-svg-icons";
 import { faCarSide } from "@fortawesome/free-solid-svg-icons";
 import Fade from "react-reveal/Fade";
 
-
-
 const InvestmentReasons = () => {
-const changeString = (string) =>{
-  if(string === "faGem") return faGem
-  if(string === "faCoins") return faCoins
-  if(string === "faChartLine") return faChartLine
-  if(string === "faHandHoldingUsd") return faHandHoldingUsd
-  if(string === "faHandSparkles") return faHandSparkles
-  if(string === "faCarSide  ") return faCarSide
-}
+  const changeString = (string) => {
+    if (string === "faGem") return faGem;
+    if (string === "faCoins") return faCoins;
+    if (string === "faChartLine") return faChartLine;
+    if (string === "faHandHoldingUsd") return faHandHoldingUsd;
+    if (string === "faHandSparkles") return faHandSparkles;
+    if (string === "faCarSide") return faCarSide;
+  };
   return (
     <>
       <Fade duration={1500}>
@@ -36,7 +34,10 @@ const changeString = (string) =>{
               const { page } = data;
               return page.page_components.map((cmp) => (
                 <div className="reasons-item" key={cmp.id}>
-                  <FontAwesomeIcon className="icon" icon={changeString(cmp.icon)} />
+                  <FontAwesomeIcon
+                    className="icon"
+                    icon={changeString(cmp.icon)}
+                  />
                   {console.log(cmp.icon)}
                   <h5>{cmp.name}</h5>
                 </div>
