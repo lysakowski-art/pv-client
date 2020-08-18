@@ -11,7 +11,6 @@ const Home = () => {
     <>
       <section className="banner">
         <Banner />
-        
       </section>
       <div className="section-wrapper">
         <section className="home-info">

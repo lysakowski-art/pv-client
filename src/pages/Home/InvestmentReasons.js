@@ -38,7 +38,6 @@ const InvestmentReasons = () => {
                     className="icon"
                     icon={changeString(cmp.icon)}
                   />
-                  {console.log(cmp.icon)}
                   <h5>{cmp.name}</h5>
                 </div>
               ));

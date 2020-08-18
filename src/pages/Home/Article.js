@@ -1,5 +1,8 @@
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
+import {Link} from "react-router-dom"
+
+
 
 const Article = ({ article }) => {
   return (
@@ -15,7 +18,7 @@ const Article = ({ article }) => {
       <div className="card-text-container">
         {ReactHtmlParser(article.content)}
       </div>
-      <button className="card-button">WIĘCEJ</button>
+      <Link className="card-button" to={`/article/${article.id}`}>WIĘCEJ</Link>
     </div>
   );
 };

@@ -14,11 +14,11 @@ const Navigation = () => {
           const { menus } = data;
           return (
             <div className="nav-cnt">
-              {menus.map((menu) => {
+              {menus.map((menu, index) => {
                 if (menu.sub_menus.length === 0) {
-                  return <MenuLink menu={menu} />;
+                  return <MenuLink menu={menu} key={index}/>;
                 } else if (menu.sub_menus.length > 0) {
-                  return <SubmenuLink menu={menu} />;
+                  return <SubmenuLink menu={menu} key={index}/>;
                 } else {
                   return null;
                 }

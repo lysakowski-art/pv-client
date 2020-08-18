@@ -16,7 +16,6 @@
     justify-content: center;
     .nav-item {
       position: relative;
-
       color: #ffffff;
       display: block;
       align-self: center;
@@ -26,6 +25,7 @@
       transition: color 0.5s ease;
     }
     a:hover{
+      cursor: pointer;
       text-decoration: none;
       color: #c8a482;
     }

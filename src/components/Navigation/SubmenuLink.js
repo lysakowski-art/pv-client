@@ -9,11 +9,11 @@ const toPath = (string) => {
   }
 };
 
-const SubmenuLink = ({ menu }) => {
-  console.log(menu);
+const SubmenuLink = ({ menu, index }) => {
+  // console.log(menu);
 
   return (
-    <li className="sub-menu-main-item" key={menu.index}>
+    <li className="sub-menu-main-item" key={menu.id}>
       <NavLink
         className="nav-item"
         activeClassName="active-nav-item"
@@ -23,7 +23,7 @@ const SubmenuLink = ({ menu }) => {
       </NavLink>
       <ul className="dropdown">
         {menu.sub_menus.map((el) => (
-          <li className="sub-menu-item" key={el.index}>
+          <li className="sub-menu-item" key={el.id}>
             <NavLink
               className="nav-item"
               activeClassName="active-nav-item"
