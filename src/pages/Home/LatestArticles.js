@@ -5,7 +5,7 @@ import Article from "./Article"
 
 const LatestArticles = () => {
   return (
-    <Query query={getLatestArticles}>
+      <Query query={getLatestArticles}>
       {({ loading, error, data }) => {
         if (loading) return "Loading";
         if (error) return `Error: ${error.message}`;

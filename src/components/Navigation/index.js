@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Query } from "react-apollo";
 import MenuLink from "./MenuLink";
 import SubmenuLink from "./SubmenuLink";
 import MENU_QUERY from "../../queries/catagories/category";
 
 const Navigation = () => {
+  const [burgerClass, setBurgerClass] = useState(false);
+
+  const burgerToggle = () => {
+    setBurgerClass(!burgerClass);
+  };
+
   return (
     <div className="nav-main-cnt">
       <Query query={MENU_QUERY}>
@@ -16,9 +22,9 @@ const Navigation = () => {
             <div className="nav-cnt">
               {menus.map((menu, index) => {
                 if (menu.sub_menus.length === 0) {
-                  return <MenuLink menu={menu} key={index}/>;
+                  return <MenuLink menu={menu} key={index} burgerClass={burgerClass}/>;
                 } else if (menu.sub_menus.length > 0) {
-                  return <SubmenuLink menu={menu} key={index}/>;
+                  return <SubmenuLink menu={menu} key={index} burgerClass={burgerClass}/>;
                 } else {
                   return null;
                 }
@@ -27,6 +33,13 @@ const Navigation = () => {
           );
         }}
       </Query>
+      <label className="burger">
+        <div className="burger-cnt" onClick={burgerToggle}>
+          <div className={burgerClass ? "change bar1" : "bar1"} />
+          <div className={burgerClass ? "change bar2" : "bar2"} />
+          <div className={burgerClass ? "change bar3" : "bar3"} />
+        </div>
+      </label>
     </div>
   );
 };

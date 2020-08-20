@@ -32,8 +32,10 @@ const Home = () => {
         </section>
 
         <Fade bottom>
-          <section className="latest-articles">
+          <section className="latest-art-wrapper">
+          <div className="latest-articles">
             <LatestArticles />
+          </div>
           </section>
         </Fade>
       </div>

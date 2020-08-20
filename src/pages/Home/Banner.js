@@ -31,11 +31,6 @@ const Banner = (env) => {
                       height: "100vh",
                     }}
                   />
-                  {/* <img
-                    className="main-banner-img"
-                    src={process.env.REACT_APP_BACKEND_URL + banner.img[0].url}
-                    alt="img"
-                  /> */}
                 </div>
               ))}
             </Carousel>

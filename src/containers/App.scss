@@ -55,3 +55,8 @@ div.main.col {
   position: relative;
   min-height: 100vh;
 }
+@media (max-width: 360px) {
+  body{
+    width: 100vw;
+  }
+}

@@ -50,3 +50,8 @@
   bottom: 0;
   background-color: #00000010;
 }
+@media(width: 360px) {
+ .investment-reasons{
+   display: none;
+ }
+}

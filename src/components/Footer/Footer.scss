@@ -61,3 +61,35 @@
     align-items: center;
   }
 }
+
+@media (width: 360px) {
+  .footer {
+    height: 100%;
+    bottom: -100px;
+    .footer-cnt {
+      flex-direction: column;
+      .contact-adress {
+        padding: 10px 0;
+
+        h4 {
+          display: none;
+        }
+        h5 {
+        font-size: 12px;
+        }
+
+        p {
+          width: 94.5vw;
+          padding: 10px;
+          text-align:justify;
+        }
+      }
+      .contact-adress:last-child{
+        padding-bottom: 60px;
+      }
+    }
+    .copyright {
+      height:40px;
+    }
+  }
+}

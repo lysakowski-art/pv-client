@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 .latest-articles {
-  padding: 20px;
+  padding: 20px 0 20px 0;
   width: 100%;
   display: grid;
   grid-template-columns: 580px 580px 580px;
   grid-template-rows: 400px 400px;
   gap: 20px 20px;
-
+ .latest-art-wrapper{
+   
+ }
   .card-cnt {
     position: relative;
     height: 100%;
@@ -49,4 +51,14 @@
       font-weight: 400;
     }
   }
+}
+@media (width: 360px) {
+ .latest-articles{
+  grid-template-columns: 360px;
+  grid-template-rows: 400px 400px 400px 400px 400px 400px; 
+  gap: 20px 0 20px 0;
+  .card-cnt:last-child{
+    margin-bottom: 200px;
+  }
+ }
 }
