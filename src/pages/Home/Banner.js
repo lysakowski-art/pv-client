@@ -16,9 +16,10 @@ const Banner = (env) => {
           if (error) return `Error: ${error.message}`;
           const { banners } = data;
           return (
-            <Carousel autoPlay infiniteLoop>
+            <Carousel autoPlay={true} infiniteLoop={true} dynamicHeight={true}>
               {banners.map((banner, index) => (
                 <div key={index} className="main-banner-container">
+                  {/* <img src={process.env.REACT_APP_BACKEND_URL + banner.img[0].url} alt=""/> */}
                   <ParallaxBanner
                     layers={[
                       {
@@ -29,10 +30,11 @@ const Banner = (env) => {
                     ]}
                     style={{
                       height: "100vh",
+                      width: "100vw",
                     }}
                   />
                 </div>
-              ))}
+              ))} 
             </Carousel>
           );
         }}

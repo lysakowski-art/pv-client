@@ -16,8 +16,8 @@
       width: 50%;
       display: flex;
       flex-direction: column;
-    padding-left: 40px;
-    padding-right: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
       background-color: #ffffff50;
       label {
         display: flex;
@@ -35,5 +35,28 @@
     padding-left: 40px;
     padding-right: 40px;
     background-color: #ffffff50;
+  }
+}
+
+@media (width: 360px) {
+  .contact-cnt {
+
+    .form-cnt {
+
+      .form {
+        width: 90%;
+        padding: 0 10px 0 10px;
+        label {
+
+        }
+        .policy-checkbox {
+
+        }
+      }
+    }
+    .privacy-info {
+      width: 90%;
+      margin-bottom: 50px;
+    }
   }
 }

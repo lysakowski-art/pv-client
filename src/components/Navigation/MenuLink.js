@@ -11,11 +11,11 @@ const toPath = (string) => {
   }
 };
 
-const MenuLink = ({ menu }) => {
+const MenuLink = ({ menu, burgerClass }) => {
   return (
     <>
       <NavLink
-        className="nav-item"
+        className={burgerClass ? "nav-item visible-menu": "nav-item"}
         activeClassName="active-nav-item"
         to={`/${toPath(menu.name)}`}
       >

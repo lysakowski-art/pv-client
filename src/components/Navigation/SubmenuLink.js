@@ -9,13 +9,14 @@ const toPath = (string) => {
   }
 };
 
-const SubmenuLink = ({ menu, index }) => {
+const SubmenuLink = ({ menu, index, burgerClass }) => {
   // console.log(menu);
 
   return (
     <li className="sub-menu-main-item" key={menu.id}>
       <NavLink
-        className="nav-item"
+        // className="nav-item"
+        className={burgerClass ? "nav-item visible-menu": "nav-item"}
         activeClassName="active-nav-item"
         to={`/${toPath(menu.name)}`}
       >

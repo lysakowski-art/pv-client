@@ -10,27 +10,27 @@ $mainFont: "Lora", serif;
 .banner {
   margin-top: 60px;
   height: 93vh;
-  width: 100%;
+  width: 100vw;
 
   background-color: #333;
   .main-banner-container {
-    width: 100%;
+    width: 100vw;
     height: 90vh;
     position: relative;
     overflow: hidden;
     .main-banner-img {
-      width: 100%;
+        width: 100%;
       position: absolute;
       top: -30px;
       left: 0;
       margin: auto;
-      width: 100%;
+      width: 100vw;
       height: auto;
     }
   }
   .title-holder {
     background-color: #33333350;
-    height: 23vh;
+    height: 220px;
     position: absolute;
     top: 0px;
     width: 100%;

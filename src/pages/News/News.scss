@@ -98,3 +98,50 @@
     }
   }
 }
+
+@media (width:360px) {
+  .news-main {
+ 
+    .news-wrapper {
+      width: 360px;
+    }
+    .news-cnt {
+
+      ul {
+
+      }
+      .article-cnt {
+        width:360px;
+        .article-content {
+          width: 260px;
+          .article-title {
+
+          }
+          .article-text {
+
+          }
+          .article-button {
+
+          }
+          .oposite-button {
+
+          }
+        }
+        .article-content-active {
+
+          .article-text {
+          }
+        }
+  
+        .article-img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+      .article-cnt-oposite {
+        width: 260px;
+
+      }
+    }
+  }
+}
