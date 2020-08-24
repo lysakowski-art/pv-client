@@ -17,7 +17,7 @@ const MenuLink = ({ menu, burgerClass }) => {
       <NavLink
         className={burgerClass ? "nav-item visible-menu": "nav-item"}
         activeClassName="active-nav-item"
-        to={`/${toPath(menu.name)}`}
+        exact to={`/${toPath(menu.name)}`}
       >
         {menu.name === "Home" ? (
           <FontAwesomeIcon className="home-icon" icon={faGem} />

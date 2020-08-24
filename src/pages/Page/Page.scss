@@ -43,3 +43,24 @@
   }
 }
 
+@media (width: 360px) {
+  .page-cnt {
+    .page-main {
+      padding: 40px 0;
+      h3 {
+        font-size: 26px;
+        font-weight: bold;
+      }
+    }
+  }
+  .page-component {
+    padding: 0;
+    div {
+      padding: 5px;
+      width: 90%;
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+}
