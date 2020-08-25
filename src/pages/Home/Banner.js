@@ -29,7 +29,7 @@ const Banner = (env) => {
                       },
                     ]}
                     style={{
-                      height: "100vh",
+                      height: "93vh",
                       width: "100vw",
                     }}
                   />

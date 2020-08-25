@@ -14,17 +14,20 @@ const toPath = (string) => {
 const MenuLink = ({ menu, burgerClass }) => {
   return (
     <>
-      <NavLink
-        className={burgerClass ? "nav-item visible-menu": "nav-item"}
-        activeClassName="active-nav-item"
-        exact to={`/${toPath(menu.name)}`}
-      >
-        {menu.name === "Home" ? (
-          <FontAwesomeIcon className="home-icon" icon={faGem} />
-        ) : (
-          menu.name.toUpperCase()
-        )}
-      </NavLink>
+      <li>
+        <NavLink
+          className={burgerClass ? "nav-item visible-menu" : "nav-item"}
+          activeClassName="active-nav-item"
+          exact
+          to={`/${toPath(menu.name)}`}
+        >
+          {menu.name === "Home" ? (
+            <FontAwesomeIcon className="home-icon" icon={faGem} />
+          ) : (
+            menu.name.toUpperCase()
+          )}
+        </NavLink>
+      </li>
     </>
   );
 };

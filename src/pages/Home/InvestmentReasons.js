@@ -22,27 +22,29 @@ const InvestmentReasons = () => {
   return (
     <>
       <Fade duration={1500}>
-        <h3 className="reasons-title">Dlaczego warto kupować diamenty?</h3>
-        <div className="reasons-cnt">
-          <Query
-            query={getInvestmentReasons}
-            variables={{ id: "5f27e143ea26eb30796b08ea" }}
-          >
-            {({ loading, error, data }) => {
-              if (loading) return "Loading...";
-              if (error) return `Error: ${error.message}`;
-              const { page } = data;
-              return page.page_components.map((cmp) => (
-                <div className="reasons-item" key={cmp.id}>
-                  <FontAwesomeIcon
-                    className="icon"
-                    icon={changeString(cmp.icon)}
-                  />
-                  <h5>{cmp.name}</h5>
-                </div>
-              ));
-            }}
-          </Query>
+        <div className="reasons-banner-cnt">
+          <h3 className="reasons-title">Dlaczego warto kupować diamenty?</h3>
+          <div className="reasons-cnt">
+            <Query
+              query={getInvestmentReasons}
+              variables={{ id: "5f27e143ea26eb30796b08ea" }}
+            >
+              {({ loading, error, data }) => {
+                if (loading) return "Loading...";
+                if (error) return `Error: ${error.message}`;
+                const { page } = data;
+                return page.page_components.map((cmp) => (
+                  <div className="reasons-item" key={cmp.id}>
+                    <FontAwesomeIcon
+                      className="icon"
+                      icon={changeString(cmp.icon)}
+                    />
+                    <h5>{cmp.name}</h5>
+                  </div>
+                ));
+              }}
+            </Query>
+          </div>
         </div>
       </Fade>
     </>

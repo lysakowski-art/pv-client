@@ -15,11 +15,11 @@ $mainFont: "Lora", serif;
   background-color: #333;
   .main-banner-container {
     width: 100vw;
-    height: 90vh;
+    height: 93  vh;
     position: relative;
     overflow: hidden;
-    .main-banner-img {  
-        width: 100%;
+    .main-banner-img {
+      width: 100%;
       position: absolute;
       top: -30px;
       left: 0;
@@ -90,7 +90,7 @@ $mainFont: "Lora", serif;
       height: 14vh;
       .title-banner {
         font-size: 2.2rem;
-      } 
+      }
       #more-arrows {
         top: -5px;
         transform: scale(0.5);
