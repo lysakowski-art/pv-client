@@ -12,10 +12,13 @@
   text-align: center;
   .reasons-banner-cnt {
     // width: 100%;
+    height: 100%;
     background-color: #33333350;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .reasons-title {
-      margin-top: 4.5rem;
       color: #ffffff;
       font-size: 2.5rem;
       width: 100%;
@@ -23,6 +26,7 @@
       padding-bottom: 1.5rem;
     }
     .reasons-cnt {
+      padding-top: 1.5rem;
       width: 100%;
       display: flex;
       justify-content: space-evenly;
@@ -30,7 +34,7 @@
       .icon {
         color: #ffffff;
         font-size: 2.6rem;
-        height: 5rem;
+        // height: 5rem;
         transition: all 0.5s 0s ease;
       }
       .icon:hover {
@@ -60,8 +64,10 @@
     .reasons-banner-cnt {
       .reasons-title {
         font-size: 2.4rem;
+        padding-bottom: 1.1rem;
       }
       .reasons-cnt {
+        padding-top: 1.1rem;
         .icon {
           font-size: 1.5rem;
           height: 4rem;
@@ -84,8 +90,10 @@
     .reasons-banner-cnt {
       .reasons-title {
         font-size: 2.3rem;
+        padding-bottom: 1rem;
       }
       .reasons-cnt {
+        padding-top: 1rem;
         .icon {
           font-size: 1.4rem;
           height: 4rem;
@@ -108,8 +116,10 @@
     .reasons-banner-cnt {
       .reasons-title {
         font-size: 2.2rem;
+        padding-bottom: 1rem;
       }
       .reasons-cnt {
+        padding-top: 1rem;
         .icon {
           font-size: 1.3rem;
           height: 4rem;
@@ -132,8 +142,10 @@
     .reasons-banner-cnt {
       .reasons-title {
         font-size: 2rem;
+        padding-bottom: 1rem;
       }
       .reasons-cnt {
+        padding-bottom: 1rem;
         .icon {
           font-size: 1.2rem;
           height: 3.5rem;
@@ -156,8 +168,10 @@
     .reasons-banner-cnt {
       .reasons-title {
         font-size: 1.8rem;
+        padding-bottom: 0.8rem;
       }
       .reasons-cnt {
+        padding-top: 0.8rem;
         font-weight: 400;
         .icon {
           font-size: 1rem;
