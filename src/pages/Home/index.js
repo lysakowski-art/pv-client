@@ -15,8 +15,7 @@ const Home = () => {
       <div className="section-wrapper">
         <section className="home-info">
           <HomeInfo />
-        </section>
-
+        </section>  
         <section className="investment-reasons">
           <ParallaxBanner
             layers={[
@@ -30,12 +29,11 @@ const Home = () => {
             <InvestmentReasons />
           </ParallaxBanner>
         </section>
-
         <Fade bottom>
           <section className="latest-art-wrapper">
-          <div className="latest-articles">
-            <LatestArticles />
-          </div>
+            <div className="latest-articles">
+              <LatestArticles />
+            </div>
           </section>
         </Fade>
       </div>

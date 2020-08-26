@@ -12,7 +12,7 @@ const Navigation = () => {
   };
   const hideMenu = () => {
     setBurgerClass(!burgerClass);
-  }
+  };
   return (
     <div className="nav-main-cnt">
       <Query query={MENU_QUERY}>
@@ -21,12 +21,28 @@ const Navigation = () => {
           if (error) return `Error! ${error.message}`;
           const { menus } = data;
           return (
-            <div className={burgerClass ? "nav-cnt nav-visible-cnt" : "nav-cnt"}>
+            <div
+              className={burgerClass ? "nav-cnt nav-visible-cnt" : "nav-cnt"}
+            >
               {menus.map((menu, index) => {
                 if (menu.sub_menus.length === 0) {
-                  return <MenuLink menu={menu} key={index} burgerClass={burgerClass} onClick={hideMenu}/>;
+                  return (
+                    <MenuLink
+                      menu={menu}
+                      key={index}
+                      burgerClass={burgerClass}
+                      onClick={hideMenu}
+                    />
+                  );
                 } else if (menu.sub_menus.length > 0) {
-                  return <SubmenuLink menu={menu} key={index} burgerClass={burgerClass} onClick={hideMenu}/>;
+                  return (
+                    <SubmenuLink
+                      menu={menu}
+                      key={index}
+                      burgerClass={burgerClass}
+                      onClick={hideMenu}
+                    />
+                  );
                 } else {
                   return null;
                 }
