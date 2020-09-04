@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
-
 .page-cnt {
   width: 100%;
   margin-top: 60px;
@@ -11,19 +10,19 @@
     width: 95%;
     padding: 40px 0;
     h3 {
-        color: #ffffff;
-        font-size: 50px;
-        line-height: 2em;
-        letter-spacing: 5px;
-        position: absolute;
-        top:50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        background-color: rgba(0,0,0, 0.6);
-        padding: 30px 50px ;
-        font-family: "Playfair Display", serif;
-        font-weight: 900;
+      color: #ffffff;
+      font-size: 50px;
+      line-height: 2em;
+      letter-spacing: 5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 50px;
+      font-family: "Playfair Display", serif;
+      font-weight: 900;
     }
   }
 }
@@ -42,6 +41,28 @@
     background-color: #ffffff50;
   }
 }
+@media (max-width: 600px) {
+  .page-cnt {
+    margin: 0;
+    .page-main {
+      padding: 40px 0;
+      h3 {
+        font-size: 26px;
+        font-weight: bold;
+      }
+    }
+  }
+  .page-component {
+    padding: 0;
+    div {
+      padding: 5px;
+      width: 90%;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
 
 @media (width: 360px) {
   .page-cnt {
@@ -58,7 +79,7 @@
     div {
       padding: 5px;
       width: 90%;
-      p{
+      p {
         font-size: 16px;
       }
     }

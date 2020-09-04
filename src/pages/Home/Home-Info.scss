@@ -2,22 +2,31 @@ $pageWidth: 100;
 
 .home-info {
   height: 50vh;
-  padding-top: 6rem;
-  padding-left: 50px;
-  padding-right: 50px;
-  width: calc(100vw - 30%);
-  background-color: #ffffff60;
-  font-family: "Crimson-text", sans-serif;
-  line-height: 27px;
-  font-size: 18px;
-  text-align: justify;
+  .latest-articles {
+    padding: 20px;
+    display: grid;
+    // height: 1000px;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    .latest-art-wrapper {
+      padding-top: 6rem;
+      padding-left: 50px;
+      padding-right: 50px;
+      width: calc(100vw - 30%);
+      background-color: #ffffff60;
+      font-family: "Crimson-text", sans-serif;
+      line-height: 27px;
+      font-size: 18px;
+      text-align: justify;
+    }
+  }
 }
 @media (max-width: 360px) {
-  .home-info{
+  .home-info {
     height: 100%;
     width: 100vw;
-    padding: 40px 0;  
-    p{
+    padding: 40px 0;
+    p {
       font-size: 16px;
       padding: 20px 15px;
     }
@@ -25,11 +34,11 @@ $pageWidth: 100;
 }
 @for $i from 6 to 20 {
   @media (max-width: #{$i * $pageWidth}px) {
-    .home-info{
+    .home-info {
       height: 100%;
       width: 100vw;
-      padding: 40px 0px;  
-      p{
+      padding: 40px 0px;
+      p {
         font-size: 16px;
         padding: 20px 45px;
       }

@@ -11,7 +11,7 @@ const toPath = (string) => {
   }
 };
 
-const MenuLink = ({ menu, burgerClass }) => {
+const MenuLink = ({ menu, burgerClass, burgerToggle }) => {
   return (
     <>
       <li>
@@ -20,6 +20,7 @@ const MenuLink = ({ menu, burgerClass }) => {
           activeClassName="active-nav-item"
           exact
           to={`/${toPath(menu.name)}`}
+          onClick={burgerToggle}
         >
           {menu.name === "Home" ? (
             <FontAwesomeIcon className="home-icon" icon={faGem} />

@@ -79,8 +79,10 @@ $mainFont: "Lora", serif;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 620px) {
   .banner {
+    width: 100vw;
+    margin-top: 0;
     background-color: #333;
     .main-banner-container {
       .main-banner-img {

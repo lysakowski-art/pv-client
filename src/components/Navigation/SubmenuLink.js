@@ -9,16 +9,16 @@ const toPath = (string) => {
   }
 };
 
-const SubmenuLink = ({ menu, index, burgerClass }) => {
+const SubmenuLink = ({ menu, index, burgerClass, burgerToggle }) => {
   // console.log(menu);
 
   return (
     <li className="sub-menu-main-item" key={menu.id}>
       <NavLink
-        // className="nav-item"
-        className={burgerClass ? "nav-item visible-menu": "nav-item"}
+        className={burgerClass ? "nav-item visible-menu" : "nav-item"}
         activeClassName="active-nav-item"
         to={`/${toPath(menu.name)}`}
+        onClick={burgerToggle}
       >
         {menu.name.toUpperCase()}
       </NavLink>
@@ -29,6 +29,7 @@ const SubmenuLink = ({ menu, index, burgerClass }) => {
               className="nav-item"
               activeClassName="active-nav-item"
               to={`/${toPath(el.name)}`}
+              onClick={burgerToggle}
             >
               {el.name.toUpperCase()}
             </NavLink>

@@ -31,7 +31,7 @@ const Navigation = () => {
                       menu={menu}
                       key={index}
                       burgerClass={burgerClass}
-                      onClick={hideMenu}
+                      burgerToggle={burgerToggle}
                     />
                   );
                 } else if (menu.sub_menus.length > 0) {
@@ -40,7 +40,7 @@ const Navigation = () => {
                       menu={menu}
                       key={index}
                       burgerClass={burgerClass}
-                      onClick={hideMenu}
+                      burgerToggle={burgerToggle}
                     />
                   );
                 } else {
