@@ -79,6 +79,20 @@ $mainFont: "Lora", serif;
   }
 }
 
+@media (max-width: 700px) {
+  .banner {
+    .title-holder {
+      height: 14vh;
+      .title-banner {
+        font-size: 4rem;
+      }
+      #more-arrows {
+        top: -5px;
+        transform: scale(0.4);
+      }
+    }
+  }
+}
 @media (max-width: 620px) {
   .banner {
     width: 100vw;
@@ -102,5 +116,19 @@ $mainFont: "Lora", serif;
   .control-arrow.control-prev,
   .control-arrow.control-next {
     display: none;
+  }
+}
+@media (max-width: 500px) {
+  .banner {
+    .title-holder {
+      height: 14vh;
+      .title-banner {
+        font-size: 2.8rem;
+      }
+      #more-arrows {
+        top: -5px;
+        transform: scale(0.4);
+      }
+    }
   }
 }

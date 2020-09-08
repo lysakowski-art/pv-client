@@ -21,27 +21,15 @@ $pageWidth: 100;
     }
   }
 }
+
 @media (max-width: 360px) {
   .home-info {
     height: 100%;
     width: 100vw;
-    padding: 40px 0;
     p {
       font-size: 16px;
       padding: 20px 15px;
-    }
-  }
-}
-@for $i from 6 to 20 {
-  @media (max-width: #{$i * $pageWidth}px) {
-    .home-info {
-      height: 100%;
-      width: 100vw;
-      padding: 40px 0px;
-      p {
-        font-size: 16px;
-        padding: 20px 45px;
-      }
+      text-align: justify;
     }
   }
 }
