@@ -11,7 +11,6 @@ const toPath = (string) => {
 
 const SubmenuLink = ({ menu, index, burgerClass, burgerToggle }) => {
   // console.log(menu);
-
   return (
     <li className="sub-menu-main-item" key={menu.id}>
       <NavLink
@@ -21,6 +20,7 @@ const SubmenuLink = ({ menu, index, burgerClass, burgerToggle }) => {
         onClick={burgerToggle}
       >
         {menu.name.toUpperCase()}
+      <div className="dropdown-arrow" onClick={burgerToggle}/>
       </NavLink>
       <ul className="dropdown">
         {menu.sub_menus.map((el) => (

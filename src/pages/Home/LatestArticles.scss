@@ -58,3 +58,10 @@
     padding-bottom: 20px;
   }
 }
+@media (max-width: 360px) {
+  .latest-articles {
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    padding-bottom: 40px;
+  }
+}

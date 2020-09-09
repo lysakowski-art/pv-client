@@ -1,35 +1,46 @@
-$pageWidth: 100;
-
 .home-info {
-  height: 50vh;
-  .latest-articles {
-    padding: 20px;
-    display: grid;
-    // height: 1000px;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    .latest-art-wrapper {
-      padding-top: 6rem;
-      padding-left: 50px;
-      padding-right: 50px;
-      width: calc(100vw - 30%);
-      background-color: #ffffff60;
-      font-family: "Crimson-text", sans-serif;
-      line-height: 27px;
-      font-size: 18px;
+  height: 60vh;
+  p {
+    font-size: 25px;
+    line-height: 35px;
+    padding: 100px 15px;
+    text-align: justify;
+  }
+}
+@media (max-width: 1600px) {
+  .home-info {
+    height: 100%;
+    width: 95vw;
+    p {
+      font-size: 22px;
+      padding: 20px 15px;
       text-align: justify;
     }
   }
 }
+@media (max-width: 1400px) {
+  .home-info {
+    p {
+      font-size: 20px;
+      padding: 20px 15px;
+    }
+  }
+}
 
+@media (max-width: 1000px) {
+  .home-info {
+    p {
+      font-size: 16px;
+      padding: 20px 15px;
+    }
+  }
+}
 @media (max-width: 360px) {
   .home-info {
-    height: 100%;
     width: 100vw;
     p {
       font-size: 16px;
       padding: 20px 15px;
-      text-align: justify;
     }
   }
 }
