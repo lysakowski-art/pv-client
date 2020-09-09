@@ -10,9 +10,7 @@ const Navigation = () => {
   const burgerToggle = () => {
     setBurgerClass(!burgerClass);
   };
-  const hideMenu = () => {
-    setBurgerClass(!burgerClass);
-  };
+ 
   return (
     <div className="nav-main-cnt">
       <Query query={MENU_QUERY}>

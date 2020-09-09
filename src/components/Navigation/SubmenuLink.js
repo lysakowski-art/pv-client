@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useState} from "react";
 import { NavLink } from "react-router-dom";
+import { faSleigh } from "@fortawesome/free-solid-svg-icons";
 
 const toPath = (string) => {
   if (string === "/home") {
@@ -10,26 +11,30 @@ const toPath = (string) => {
 };
 
 const SubmenuLink = ({ menu, index, burgerClass, burgerToggle }) => {
-  // console.log(menu);
+  const [visibleDropdown, setVisibleDropdown] = useState(false);
+  const handleVisibleDropdown = () => {
+    setVisibleDropdown(visibleDropdown);
+  }
+  
   return (
     <li className="sub-menu-main-item" key={menu.id}>
       <NavLink
         className={burgerClass ? "nav-item visible-menu" : "nav-item"}
         activeClassName="active-nav-item"
         to={`/${toPath(menu.name)}`}
-        onClick={burgerToggle}
+
       >
         {menu.name.toUpperCase()}
-      <div className="dropdown-arrow" onClick={burgerToggle}/>
+      <div className="dropdown-arrow" onClick={handleVisibleDropdown}/>
       </NavLink>
-      <ul className="dropdown">
+      <ul className={visibleDropdown?"dropdown visible-dropdown":"dropdown"}>
         {menu.sub_menus.map((el) => (
           <li className="sub-menu-item" key={el.id}>
             <NavLink
               className="nav-item"
               activeClassName="active-nav-item"
               to={`/${toPath(el.name)}`}
-              onClick={burgerToggle}
+
             >
               {el.name.toUpperCase()}
             </NavLink>

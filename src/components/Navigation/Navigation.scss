@@ -270,17 +270,17 @@
     top: 50%;
   }
   .nav-cnt .sub-menu-main-item:hover .dropdown,
-  .nav-cnt .sub-menu-main-item .dropdown:hover {
+  .nav-cnt .sub-menu-main-item .dropdown {
     background-color: lighten($color: #333333, $amount: 20);
-    // left: 120px;
     position: relative;
     top: 0;
     width: 100%;
-    background-color: #333333;
+    background-color: lighten(#333333,10);
     z-index: 2000;
   }
   .nav-cnt li.sub-menu-main-item .nav-item {
     width: 100%;
+
   }
   .nav-main-cnt .nav-cnt .nav-item.visible-menu {
     width: 100vw;
