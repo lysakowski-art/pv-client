@@ -99,11 +99,13 @@
 
 @media (width: 360px) {
   .news-main {
+
     .news-wrapper {
       width: 360px;
       padding: 0;
     }
     .news-cnt {
+      margin-top: 0;
       width: 360px;
       .article-cnt {
         width: 360px;

@@ -1,6 +1,5 @@
 import React,{useState} from "react";
 import { NavLink } from "react-router-dom";
-import { faSleigh } from "@fortawesome/free-solid-svg-icons";
 
 const toPath = (string) => {
   if (string === "/home") {
@@ -21,7 +20,7 @@ const SubmenuLink = ({ menu, index, burgerClass, burgerToggle }) => {
       <NavLink
         className={burgerClass ? "nav-item visible-menu" : "nav-item"}
         activeClassName="active-nav-item"
-        to={`/${toPath(menu.name)}`}
+        to={`/page/${toPath(menu.name)}`}
 
       >
         {menu.name.toUpperCase()}
@@ -33,7 +32,7 @@ const SubmenuLink = ({ menu, index, burgerClass, burgerToggle }) => {
             <NavLink
               className="nav-item"
               activeClassName="active-nav-item"
-              to={`/${toPath(el.name)}`}
+              to={`/page/${toPath(el.name)}`}
 
             >
               {el.name.toUpperCase()}

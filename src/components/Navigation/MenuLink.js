@@ -19,7 +19,7 @@ const MenuLink = ({ menu, burgerClass, burgerToggle }) => {
           className={burgerClass ? "nav-item visible-menu" : "nav-item"}
           activeClassName="active-nav-item"
           exact
-          to={`/${toPath(menu.name)}`}
+          to={`/page/${toPath(menu.name)}`}
           onClick={burgerToggle}
         >
           {menu.name === "Home" ? (
