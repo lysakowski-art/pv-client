@@ -1,11 +1,12 @@
 import React from "react";
+import "./NotFound.scss";
 
 const NotFound = () => {
   return (
-    <div>
-      <div>
-        <h2>No Page Found</h2>
-        <p>something went wrong</p>
+    <div className="noPageFound-cnt">
+      <div className="noPageFound-content">
+        <h2>404 No Page Found</h2>
+        <p>something has gone wrong...</p>
       </div>
     </div>
   );
