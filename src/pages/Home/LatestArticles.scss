@@ -58,7 +58,7 @@
       // font-family: Cabin, sans-serif;
       // font-weight: 400;
     }
-    .card-button:hover{
+    .card-button:hover {
       color: #ffffff !important;
       background: #c8a482;
       border-color: #c8a482 !important;
@@ -74,10 +74,10 @@
     padding-bottom: 20px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 320px) {
   .latest-articles {
     padding: 0;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     padding-bottom: 40px;
   }
 }

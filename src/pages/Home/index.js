@@ -26,10 +26,10 @@ const Home = () => {
               },
             ]}
           >
-            <InvestmentReasons />
+          <InvestmentReasons />
           </ParallaxBanner>
         </section>
-        <Fade bottom duration={4000}>
+        <Fade duration={500}>
           <section className="latest-art-wrapper">
             <div className="latest-articles">
               <LatestArticles />
