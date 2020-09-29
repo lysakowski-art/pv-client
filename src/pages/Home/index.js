@@ -29,7 +29,7 @@ const Home = () => {
             <InvestmentReasons />
           </ParallaxBanner>
         </section>
-        <Fade bottom>
+        <Fade bottom duration={4000}>
           <section className="latest-art-wrapper">
             <div className="latest-articles">
               <LatestArticles />

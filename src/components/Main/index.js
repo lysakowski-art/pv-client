@@ -11,12 +11,12 @@ const Main = () => {
   return (
     <div className="cnt">
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/news" component={News}/>
+        <Route exact path="/page/" component={Home} />
+        <Route exact path="/news" component={News} />
         <Route exact path="/kontakt" component={Contact} />
         <Route exact path="/page/:url" component={Page} />
-        <Route exact path="/article/:url" component={ArticleFull}/>
-        <Route component={NotFound}/>
+        <Route exact path="/article/:url" component={ArticleFull} />
+        <Route component={NotFound} />
       </Switch>
     </div>
   );

@@ -11,7 +11,8 @@ const toPath = (string) => {
   }
 };
 
-const MenuLink = ({ menu, burgerClass, burgerToggle }) => {
+const MenuLink = ({ menu, burgerClass,burgerToggle }) => {
+
   return (
     <>
       <li>

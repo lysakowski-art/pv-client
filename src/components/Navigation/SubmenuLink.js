@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const toPath = (string) => {
@@ -9,31 +9,50 @@ const toPath = (string) => {
   }
 };
 
-const SubmenuLink = ({ menu, index, burgerClass, burgerToggle }) => {
+const SubmenuLink = ({ menu, burgerClass, burgerToggle }) => {
   const [visibleDropdown, setVisibleDropdown] = useState(false);
-  const handleVisibleDropdown = () => {
-    setVisibleDropdown(visibleDropdown);
-  }
-  
+  const [isClose, setIsClose] = useState(true);
+
+  const handleSublink = () => {
+    if (isClose) {
+      setVisibleDropdown(!visibleDropdown);
+      setIsClose(!isClose);
+    } else{
+      burgerToggle();
+      setVisibleDropdown(!visibleDropdown);
+      setIsClose(!isClose);
+    }
+  };
   return (
     <li className="sub-menu-main-item" key={menu.id}>
       <NavLink
         className={burgerClass ? "nav-item visible-menu" : "nav-item"}
         activeClassName="active-nav-item"
         to={`/page/${toPath(menu.name)}`}
-
+        onClick={handleSublink}
       >
         {menu.name.toUpperCase()}
-      <div className="dropdown-arrow" onClick={handleVisibleDropdown}/>
+        <div className="arrow_cnt">
+          <div
+            className={
+              visibleDropdown
+                ? "dropdown-arrow dropdown-arrow-rotate"
+                : "dropdown-arrow"
+            }
+          />
+        </div>
       </NavLink>
-      <ul className={visibleDropdown?"dropdown visible-dropdown":"dropdown"}>
+
+      <ul
+        className={visibleDropdown ? "dropdown visible-dropdown" : "dropdown"}
+      >
         {menu.sub_menus.map((el) => (
           <li className="sub-menu-item" key={el.id}>
             <NavLink
               className="nav-item"
               activeClassName="active-nav-item"
               to={`/page/${toPath(el.name)}`}
-
+              onClick={handleSublink}
             >
               {el.name.toUpperCase()}
             </NavLink>

@@ -29,14 +29,17 @@
         cursor: pointer;
         transition: color 0.5s ease;
         align-items: center;
-        .dropdown-arrow {
-          height: 0px;
-          width: 0px;
-          border-left: 5px solid transparent;
-          border-right: 5px solid transparent;
-          border-top: 10px solid #fff;
-          margin-left: 10px;
-          display: none;
+        .arrow_cnt {
+          .dropdown-arrow {
+            height: 7px;
+            width: 7px;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            transform: rotate(-45deg);
+            margin-left: 10px;
+            display: none;
+            transition: all 500ms linear;
+          }
         }
       }
     }
@@ -243,9 +246,6 @@
         font-size: 12px;
         background-color: #333333;
         // left: -200px;
-        .dropdown-arrow {
-          display: block;
-        }
       }
       .nav-item.active-nav-item {
         display: block;
@@ -256,8 +256,10 @@
         left: 50%;
         height: 7vh;
         transform: translateX(-50%);
-        .dropdown-arrow {
-          display: inline-block;
+        .arrow_cnt {
+          .dropdown-arrow {
+            display: inline-block;
+          }
         }
       }
     }
@@ -266,21 +268,21 @@
     }
   }
   .home-icon {
-    right: 60px;
+    right: 70px;
     top: 50%;
   }
   .nav-cnt .sub-menu-main-item:hover .dropdown,
   .nav-cnt .sub-menu-main-item .dropdown {
+    display: none;
     background-color: lighten($color: #333333, $amount: 20);
     position: relative;
     top: 0;
     width: 100%;
-    background-color: lighten(#333333,10);
+    background-color: lighten(#333333, 10);
     z-index: 2000;
   }
   .nav-cnt li.sub-menu-main-item .nav-item {
     width: 100%;
-
   }
   .nav-main-cnt .nav-cnt .nav-item.visible-menu {
     width: 100vw;
@@ -304,5 +306,20 @@
         }
       }
     }
+  }
+  .nav-main-cnt .nav-cnt .sub-menu-main-item:hover .dropdown,
+  .nav-main-cnt .nav-cnt .sub-menu-main-item .dropdown:hover {
+    display: none;
+  }
+  .dropdown.visible-dropdown {
+    display: block !important;
+  }
+  .nav-main-cnt
+    .nav-cnt
+    li
+    .nav-item
+    .arrow_cnt
+    .dropdown-arrow.dropdown-arrow-rotate {
+    transform: rotate(-315deg);
   }
 }
