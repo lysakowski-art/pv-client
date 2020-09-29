@@ -11,16 +11,16 @@ const toPath = (string) => {
 
 const SubmenuLink = ({ menu, burgerClass, burgerToggle }) => {
   const [visibleDropdown, setVisibleDropdown] = useState(false);
-  const [isClose, setIsClose] = useState(true);
+  const [isClosed, setIsClosed] = useState(true);
 
   const handleSublink = () => {
-    if (isClose) {
+    if (isClosed) {
       setVisibleDropdown(!visibleDropdown);
-      setIsClose(!isClose);
+      setIsClosed(!isClosed);
     } else{
       burgerToggle();
       setVisibleDropdown(!visibleDropdown);
-      setIsClose(!isClose);
+      setIsClosed(!isClosed);
     }
   };
   return (
