@@ -38,15 +38,31 @@
     }
     .card-button {
       position: absolute;
-      bottom: 5px;
-      left: 5px;
-      border: none;
-      background-color: #c9a482;
-      color: #fff;
-      padding: 10px 30px;
-      font-size: 12px;
-      font-family: Cabin, sans-serif;
-      font-weight: 400;
+      font-weight: bold;
+      color: #333333 !important;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: #ffffff;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: 2px solid #333333 !important;
+      display: inline-block;
+      transition: all 0.4s ease 0s;
+      // bottom: 5px;
+      // left: 5px;
+      // border: none;
+      // background-color: #c9a482;
+      // color: #fff;
+      // padding: 10px 30px;
+      // font-size: 12px;
+      // font-family: Cabin, sans-serif;
+      // font-weight: 400;
+    }
+    .card-button:hover{
+      color: #ffffff !important;
+      background: #c8a482;
+      border-color: #c8a482 !important;
+      transition: all 0.4s ease 0s;
     }
   }
 }
