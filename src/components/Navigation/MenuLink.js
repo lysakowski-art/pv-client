@@ -11,24 +11,31 @@ const toPath = (string) => {
   }
 };
 
-const MenuLink = ({ menu, burgerClass,burgerToggle }) => {
-
+const MenuLink = ({ menu, burgerClass, burgerToggle }) => {
   return (
     <>
       <li>
-        <NavLink
-          className={burgerClass ? "nav-item visible-menu" : "nav-item"}
-          activeClassName="active-nav-item"
-          exact
-          to={`/page/${toPath(menu.name)}`}
-          onClick={burgerToggle}
-        >
-          {menu.name === "Home" ? (
+        {menu.name === "Home" ? (
+          <NavLink
+            className={burgerClass ? "nav-item visible-menu" : "nav-item"}
+            activeClassName="active-nav-item"
+            exact
+            to={`/${toPath(menu.name)}`}
+            onClick={burgerToggle}
+          >
             <FontAwesomeIcon className="home-icon" icon={faGem} />
-          ) : (
-            menu.name.toUpperCase()
-          )}
-        </NavLink>
+          </NavLink>
+        ) : (
+          <NavLink
+            className={burgerClass ? "nav-item visible-menu" : "nav-item"}
+            activeClassName="active-nav-item"
+            exact
+            to={`/page/${toPath(menu.name)}`}
+            onClick={burgerToggle}
+          >
+            {menu.name.toUpperCase()}
+          </NavLink>
+        )}
       </li>
     </>
   );
