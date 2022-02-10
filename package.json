@@ -17,7 +17,7 @@
     "dotenv": "^8.2.0",
     "graphql": "^15.3.0",
     "is-odd": "^3.0.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-awesome-slider": "^4.1.0",
